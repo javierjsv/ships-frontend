@@ -1,0 +1,127 @@
+<app-header auth="true" id="formPsa"></app-header>
+
+
+<div class="row mx-0 px-5 px-md-5 px-lg-5 mt-4">
+
+
+  <div class="col-12  col-md-4 col-lg-4 mb-3">
+
+    <div class="card-border text-center p-5">
+      <img class="avatar-border img-fluid" [src]="GlobalStr.PASAJERO" alt="piloto">
+      <p class="mb-0 mt-2 font-size-18">{{"PASSENGER" | translate}} {{"TICKET" | translate}}</p>
+      <p class="mb-0 mt-2 font-size-18">{{profile['nombre']}}</p>
+      <p class="font-size-18">{{profile['email']}}</p>
+    </div>
+  </div>
+
+  <div class="col-12 col-md-8 col-lg-8 mb-3">
+
+    <div class="card-border p-5">
+
+
+      <form [formGroup]="form" (ngSubmit)="save()">
+
+
+        <div class="col-12 form-group mb-0 px-0">
+          <h1> {{"NAME_SHIP" | translate}} :  {{order?.nombre}}</h1>
+
+        </div>
+
+
+        <div class="col-12 form-group mb-0 px-0">
+          <label class="mt-0 font-size-14">{{"UBICATION" | translate}} </label>
+          <input type="text" class="form-control"
+                 aria-describedby="url"
+                 placeholder="" formControlName="ubicacion">
+          <span *ngIf="(form.controls.ubicacion.status == 'INVALID') && (form.controls.ubicacion.touched)"
+                class="text-danger">
+          The field is required
+        </span>
+        </div>
+
+
+        <div class="col-12 form-group mb-0 px-0">
+          <label class="mt-0 font-size-14">{{"START_DATE" | translate}} </label>
+          <input type="datetime-local" class="form-control"
+                 aria-describedby="url"
+                 placeholder="" formControlName="fecha_llegada">
+          <span *ngIf="(form.controls.fecha_llegada.status == 'INVALID') && (form.controls.fecha_llegada.touched)"
+                class="text-danger">
+          The field is required
+        </span>
+        </div>
+
+
+        <div class="col-12 form-group mb-0 px-0">
+          <label class="mt-0 font-size-14">{{"END_DATE" | translate}} </label>
+          <input type="datetime-local" class="form-control"
+                 aria-describedby="url"
+                 placeholder="" formControlName="fecha_salida">
+          <span *ngIf="(form.controls.fecha_salida.status == 'INVALID') && (form.controls.fecha_salida.touched)"
+                class="text-danger">
+          The field is required
+        </span>
+        </div>
+
+
+        <div class="text-right">
+
+          <button type="submit"
+                  class="btn btn-primary m-3 px-5 mr-0-important">
+            <span class="px-5"> <i class="fas fa-rocket mr-3"></i> {{state.save ? 'Add' : 'Update'}} </span>
+          </button>
+        </div>
+
+      </form>
+
+
+    </div>
+
+
+  </div>
+
+
+  <div class="col-12 mb-5">
+
+
+    <h2 class="my-3">{{"MY_TRIPS" | translate}}</h2>
+
+    <div class="card-border p-5 mt-3">
+
+      <div class="table-responsive">
+
+        <table class="table table-th-border-0 table-td-border-1-bottom">
+          <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">{{"CREATE_DATE" | translate}}</th>
+            <th scope="col">{{"UBICATION" | translate}}</th>
+            <th scope="col">{{"START_DATE" | translate}}</th>
+            <th scope="col">{{"END_DATE" | translate}}</th>
+            <th scope="col">{{"OPTIONS" | translate}}</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr *ngFor="let pasaje of pasajes; index as i">
+            <th scope="row">{{pasaje?.id}}</th>
+            <td>{{pasaje?.fecha_creacion | momentdate:"LLL"}}</td>
+            <td>{{pasaje?.ubicacion}}</td>
+            <td>{{pasaje?.fecha_llegada | momentdate:"LLL"}}</td>
+            <td>{{pasaje?.fecha_salida | momentdate:"LLL"}}</td>
+            <td>
+              <i class="fas fa-edit text-success mr-3 cursor" (click)="setValue(pasaje)"></i>
+              <i class="fas fa-trash-alt text-danger cursor" (click)="deleteLik(pasaje, i)"></i>
+            </td>
+          </tr>
+
+
+          </tbody>
+        </table>
+      </div>
+
+
+    </div>
+  </div>
+
+
+</div>

@@ -1,0 +1,18 @@
+<div class="row mx-0 pt-4 px-5" *ngIf="auth === 'false'">
+  <div class="col-12" style="text-align: right">
+    <button type="button" class="btn px-5 btn-outline-primary float-right" (click)="go()">{{name}}</button>
+  </div>
+</div>
+
+
+<div class="row mx-0 px-5" *ngIf="auth === 'true'">
+  <div class="col-11 px-0">
+    <img class="img-fluid img-dashboard" [src]="GlobalStr.LOGO_LINK" alt="IMG">
+  </div>
+  <div class="col-1 d-flex align-items-center px-0">
+    <button type="button" class="btn btn-outline-primary float-right" (click)="logout()">{{"LOGOUT" | translate}}
+    </button>
+  </div>
+
+</div>
+

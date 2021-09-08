@@ -1,0 +1,99 @@
+<app-header auth="true" id="form"></app-header>
+
+
+<div class="row mx-0 px-5 px-md-5 px-lg-5 mt-4">
+
+  <div class="col-12  col-md-4 col-lg-4 mb-3">
+
+    <div class="card-border text-center p-5">
+      <img class="avatar-border img-fluid" [src]="GlobalStr.PILOTO" alt="piloto">
+      <p class="mb-0 mt-2 font-size-18">{{profile?.nombre}} |  <b> {{"PILOT" | translate}}</b>  </p>
+      <p class="font-size-18 mb-0">{{profile?.email}}</p>
+    </div>
+  </div>
+
+  <div class="col-12 col-md-8 col-lg-8">
+
+    <!--form-->
+    <div class="card-border px-5 pt-5 pb-2">
+
+      <form [formGroup]="form" (ngSubmit)="save()">
+
+
+        <div class="col-12 form-group mb-0 px-0">
+          <label class="mt-0 font-size-14">{{"SHIP_NAME" | translate}} </label>
+          <input type="text" class="form-control"
+                 aria-describedby="url"
+                 placeholder="" formControlName="nombre">
+          <span *ngIf="(form.controls.nombre.status == 'INVALID') && (form.controls.nombre.touched)"
+                class="text-danger">
+          The field is required
+        </span>
+        </div>
+
+        <div class="col-12 form-group mb-0 px-0 mt-2">
+          <label class="mt- font-size-140">{{"DESCRIPTION" | translate }}</label>
+          <input type="text" class="form-control"
+                 aria-describedby="name"
+                 placeholder="" formControlName="descripcion">
+          <span *ngIf="(form.controls.descripcion.status == 'INVALID') && (form.controls.descripcion.touched)"
+                class="text-danger">
+          The field is required
+        </span>
+        </div>
+
+
+        <div class="text-right">
+
+          <button type="submit"
+                  class="btn btn-primary m-3 px-5 mr-0-important">
+            <span class="px-5"> <i class="fas fa-rocket mr-3"></i> {{state.save ? 'Add' : 'Update'}} </span>
+          </button>
+        </div>
+
+      </form>
+    </div>
+    <!--/form-->
+
+  </div>
+
+
+  <div class="col-12 mb-5">
+
+
+    <div class="card-border p-5 mt-3">
+
+
+      <div class="table-responsive">
+
+        <table class="table table-th-border-0 table-td-border-1-bottom">
+          <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">{{"SHIP_NAME" | translate}}</th>
+            <th scope="col">{{"DESCRIPTION" | translate}}</th>
+            <th scope="col">{{"OPTIONS" | translate}}</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr *ngFor="let nave of naves; index as i">
+            <th scope="row">{{nave?.id}}</th>
+            <td>{{nave?.nombre}}</td>
+            <td>{{nave?.descripcion}}</td>
+            <td>
+              <i class="fas fa-edit text-success mr-3 cursor" (click)="setValue(nave)"></i>
+              <i class="fas fa-trash-alt text-danger cursor" (click)="deleteLik(nave , i)"></i>
+            </td>
+          </tr>
+
+
+          </tbody>
+        </table>
+      </div>
+
+    </div>
+
+
+  </div>
+
+</div>

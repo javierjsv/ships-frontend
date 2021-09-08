@@ -1,0 +1,76 @@
+<app-header auth="true"></app-header>
+
+
+<div class="row mx-0 px-5 px-md-5 px-lg-5 mt-4">
+
+
+  <div class="col-12  col-md-4 col-lg-4 mb-3">
+
+    <div class="card-border text-center p-5">
+      <img class="avatar-border img-fluid" [src]="GlobalStr.PASAJERO" alt="piloto">
+      <p class="mb-0 mt-2 font-size-18">{{"PASSENGER" | translate}}</p>
+      <p class="mb-0 mt-2 font-size-18">{{profile?.nombre}}</p>
+      <p class="font-size-18">{{profile?.email}}</p>
+    </div>
+
+  </div>
+
+  <div class="col-12 col-md-8 col-lg-8 mb-3">
+
+    <div class="card-border text-center p-5">
+      <h1 class="display-4 text-primary">{{"WELCOME_TITLE_MSG" | translate}}</h1>
+      <p class="m-0 font-size-30" style="font-size: 30px">{{"SELECT_SHIP" | translate}}</p>
+    </div>
+
+
+  </div>
+
+
+  <div class="col-12 mb-5">
+
+
+    <h2 class="my-3">{{"SHIPS" | translate}}</h2>
+
+    <div class="card-border p-5 mt-3">
+
+      <div class="table-responsive">
+
+        <table class="table table-th-border-0 table-td-border-1-bottom">
+          <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">{{"SHIP_NAME" | translate}}</th>
+            <th scope="col">{{"DESCRIPTION" | translate}}</th>
+            <th scope="col">{{"SELECT_A_SHIP" | translate}}</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr *ngFor="let nave of naves; index as i">
+            <th scope="row">{{nave?.id}}</th>
+            <td>{{nave?.nombre}}</td>
+            <td>{{nave?.descripcion}}</td>
+            <td>
+
+
+              <button type="submit"
+                      class="btn btn-primary m-3 px-5 mr-0-important">
+              <span class="px-5" (click)="setNave(nave)">
+                <i class="fas fa-rocket mr-3"></i>
+              </span>
+              </button>
+
+
+            </td>
+          </tr>
+
+
+          </tbody>
+        </table>
+      </div>
+
+    </div>
+  </div>
+
+
+</div>
+

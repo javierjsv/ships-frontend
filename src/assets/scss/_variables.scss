@@ -1,0 +1,302 @@
+
+
+$white: #FFFFFF;
+$black: #000000;
+$orange: #FF9800;
+$facebook: #3557A0;
+$google: #DD2929;
+$gray: #4A4A4A;
+$gray-9B: #9B9B9B;
+$gray-10B: #979797;
+$gray-light: #D8D8D8;
+$gray-8c: #8c8c8c;
+$gray-lighter: #EFEFEF;
+$gray-30: #303030;
+$green: #7ED321;
+$fuchsia: #FF61C7;
+$pink: #FF838E;
+$pink-btn-hover: #FFABB0;
+$f9: #F9F9F9;
+$EB: #EBEBEB;
+$BE: #BEBEBE;
+$EF: #EFEFEF;
+$negro29: #292929;
+$DE: #DEDEDE;
+$gray73: #737373;
+$grayf4: #f4f4f4;
+$grayc4: #C4C4C4;
+
+
+$f-8px				: 0.5714rem;
+$f-9px				: 0.6429rem;
+$f-10px				: 0.7143rem;
+$f-11px				: 0.7857rem;
+$f-12px				: 0.8571rem;
+$f-13px				: 0.9286rem;
+$f-14px				: 1rem;
+$f-15px				: 1.071rem;
+$f-16px				: 1.143rem;
+$f-18px				: 1.286rem;
+$f-20px				: 1.429rem;
+$f-22px				: 1.571rem;
+$f-24px				: 1.714rem;
+$f-25px				: 1.786rem;
+$f-26px				: 1.857rem;
+$f-28px				: 2rem;
+$f-30px				: 2.143rem;
+$f-32px				: 2.286rem;
+$f-34px				: 2.429rem;
+$f-36px				: 2.571rem;
+$f-38px				: 2.714rem;
+$f-40px				: 2.857rem;
+$f-42px				: 3rem;
+$f-44px				: 3.143rem;
+$f-46px				: 3.286rem;
+$f-48px				: 3.429rem;
+$f-52px				: 3.714rem;
+//$f-52pxx				: 3.714rem;
+$f-64px				: 4.571rem;
+
+@font-face{
+  font-family: "Montserrat";
+  src: url('/assets/fonts/Montserrat/Montserrat-Thin.ttf');
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face{
+  font-family: "Montserrat";
+  src: url('/assets/fonts/Montserrat/Montserrat-ThinItalic.ttf');
+  font-weight: 100;
+  font-style: italic;
+}
+
+@font-face{
+  font-family: "Montserrat";
+  src: url('/assets/fonts/Montserrat/Montserrat-ExtraLight.ttf');
+  font-weight: 200;
+  font-style: normal;
+}
+
+@font-face{
+  font-family: "Montserrat";
+  src: url('/assets/fonts/Montserrat/Montserrat-ExtraLightItalic.ttf');
+  font-weight: 200;
+  font-style: italic;
+}
+
+@font-face{
+  font-family: "Montserrat";
+  src: url('/assets/fonts/Montserrat/Montserrat-Light.ttf');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face{
+  font-family: "Montserrat";
+  src: url('/assets/fonts/Montserrat/Montserrat-LightItalic.ttf');
+  font-weight: 300;
+  font-style: italic;
+}
+
+@font-face{
+  font-family: "Montserrat";
+  src: url('/assets/fonts/Montserrat/Montserrat-Regular.ttf');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face{
+  font-family: "Montserrat";
+  src: url('/assets/fonts/Montserrat/Montserrat-Italic.ttf');
+  font-weight: 400;
+  font-style: italic;
+}
+
+@font-face{
+  font-family: "Montserrat";
+  src: url('/assets/fonts/Montserrat/Montserrat-Medium.ttf');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face{
+  font-family: "Montserrat";
+  src: url('/assets/fonts/Montserrat/Montserrat-MediumItalic.ttf');
+  font-weight: 500;
+  font-style: italic;
+}
+
+@font-face{
+  font-family: "Montserrat";
+  src: url('/assets/fonts/Montserrat/Montserrat-SemiBold.ttf');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face{
+  font-family: "Montserrat";
+  src: url('/assets/fonts/Montserrat/Montserrat-SemiBoldItalic.ttf');
+  font-weight: 600;
+  font-style: italic;
+}
+
+@font-face{
+  font-family: "Montserrat";
+  src: url('/assets/fonts/Montserrat/Montserrat-Bold.ttf');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face{
+  font-family: "Montserrat";
+  src: url('/assets/fonts/Montserrat/Montserrat-BoldItalic.ttf');
+  font-weight: 700;
+  font-style: italic;
+}
+
+@font-face{
+  font-family: "Montserrat";
+  src: url('/assets/fonts/Montserrat/Montserrat-ExtraBold.ttf');
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face{
+  font-family: "Montserrat";
+  src: url('/assets/fonts/Montserrat/Montserrat-ExtraBoldItalic.ttf');
+  font-weight: 800;
+  font-style: italic;
+}
+
+@font-face{
+  font-family: "Montserrat";
+  src: url('/assets/fonts/Montserrat/Montserrat-Black.ttf');
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face{
+  font-family: "Montserrat";
+  src: url('/assets/fonts/Montserrat/Montserrat-BlackItalic.ttf');
+  font-weight: 900;
+  font-style: italic;
+}
+
+$monserrat: "Montserrat";
+
+/* Helvetica */
+@font-face {
+  font-family: 'Helvetica';
+  font-style: normal;
+  font-weight: normal;
+  src: url('/assets/fonts/Helvetica/Helvetica.woff');
+}
+
+
+@font-face {
+  font-family: 'Helvetica Oblique';
+  font-style: normal;
+  font-weight: normal;
+  src: url('/assets/fonts/Helvetica/Helvetica-Oblique.woff');
+}
+
+
+@font-face {
+  font-family: 'Helvetica Compressed';
+  font-style: normal;
+  font-weight: normal;
+  src: url('/assets/fonts/Helvetica/helvetica-compressed.woff');
+}
+
+
+@font-face {
+  font-family: 'Helvetica Rounded Bold';
+  font-style: normal;
+  font-weight: normal;
+  src: url('/assets/fonts/Helvetica/helvetica-rounded-bold.woff');
+}
+
+
+@font-face {
+  font-family: 'Helvetica';
+  font-style: normal;
+  font-weight: 700;
+  src: url('/assets/fonts/Helvetica/Helvetica-Bold.woff') format('woff');
+}
+
+
+@font-face {
+  font-family: 'Helvetica Bold Oblique';
+  font-style: normal;
+  font-weight: normal;
+  src: url('/assets/fonts/Helvetica/Helvetica-BoldOblique.woff');
+}
+
+
+@font-face {
+  font-family: 'Helvetica Light';
+  font-style: normal;
+  font-weight: 100;
+  src: url('/assets/fonts/Helvetica/helvetica-light.woff');
+}
+
+$helvetica: "Helvetica";
+
+
+@font-face{
+  font-family: "Avenir";
+  src: url('/assets/fonts/Avenir/Avenir.ttc');
+  font-style: normal;
+}
+
+@font-face{
+  font-family: "Avenir";
+  font-style: normal;
+  src: url('/assets/fonts/Avenir/Black.ttf');
+}
+
+@font-face{
+  font-family: "Avenir";
+  font-style: normal;
+  src: url('/assets/fonts/Avenir/Book.ttf');
+  font-weight: 300;
+}
+
+@font-face{
+  font-family: "Avenir";
+  font-style: normal;
+  src: url('/assets/fonts/Avenir/Heavy.ttf');
+  font-weight: 700;
+}
+
+@font-face{
+  font-family: "Avenir";
+  font-style: normal;
+  src: url('/assets/fonts/Avenir/Light.ttf');
+  font-weight: 200;
+}
+
+@font-face{
+  font-family: "Avenir";
+  font-style: normal;
+  src: url('/assets/fonts/Avenir/LTStd-Roman.otf');
+  //font-weight: 900;
+}
+
+@font-face{
+  font-family: "Avenir";
+  font-style: normal;
+  src: url('/assets/fonts/Avenir/Medium.ttf');
+  font-weight: 500;
+}
+
+@font-face{
+  font-family: "Avenir";
+  font-style: normal;
+  src: url('/assets/fonts/Avenir/Regular.ttf');
+  font-weight: 400;
+}
+
+
+$avenir : "Avenir";

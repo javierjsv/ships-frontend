@@ -1,0 +1,53 @@
+<app-header name="SINGNUP" rute="register" auth="false"></app-header>
+
+<div class="container d-flex align-items-center justify-content-center content-navbar-img ">
+
+  <img [src]="GlobalStr.LOGO_LINK" class="img-fluid h-150" alt="img">
+</div>
+
+<div class="container d-flex align-items-center justify-content-center ">
+
+
+  <div class="row card-border card-width m-5 p-5">
+
+    <form [formGroup]="form" (ngSubmit)="login()" class="w-100">
+
+      <h1 class="mb-0 font-size-24">{{"LOGIN" | translate}}</h1>
+      <div class="col-12 form-group mb-0 px-0">
+        <label class="font-size-14 mt-3 ">{{"EMAIL" | translate }}</label>
+        <input type="text" class="form-control"
+               aria-describedby="email"
+               placeholder="" formControlName="email">
+        <span *ngIf="(form.controls.email.status == 'INVALID') && (form.controls.email.touched)" class="text-danger">
+            the field is required and should be valid
+        </span>
+      </div>
+
+      <div class="col-12 form-group mb-0 px-0 mt-3">
+        <label class="mt-0 font-size-14">{{"PASSWORD" | translate}}</label>
+        <input type="password" class="form-control"
+               aria-describedby="password"
+               placeholder="" formControlName="password">
+        <span *ngIf="(form.controls.password.status == 'INVALID') && (form.controls.password.touched)"
+              class="text-danger">
+          The field is required
+        </span>
+      </div>
+
+
+      <div class="text-center col-12 mt-3">
+
+        <button type="submit"
+                class="btn btn-primary btn-block" (click)="login()">
+          {{"SAVE" | translate}}
+        </button>
+
+      </div>
+
+    </form>
+
+
+  </div>
+
+
+</div>

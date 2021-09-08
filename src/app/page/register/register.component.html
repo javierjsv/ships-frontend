@@ -1,0 +1,90 @@
+<app-header name="LOGIN" rute="login" auth="false"></app-header>
+
+<div class="container d-flex align-items-center justify-content-center content-navbar-img">
+  <img [src]="GlobalStr.LOGO_LINK" class="img-fluid h-150" alt="img">
+</div>
+
+<div class="container d-flex align-items-center justify-content-center ">
+
+
+  <div class="row card-border card-width m-5 p-5">
+
+    <form [formGroup]="form" (ngSubmit)="singUp()" class="w-100">
+
+      <h1 class="mb-0  font-size-24">SIGNUP</h1>
+      <div class="col-12 form-group mb-0 px-0">
+        <label class="mt-0 font-size-14">Full Name</label>
+        <input type="text" class="form-control"
+               aria-describedby="name"
+               placeholder="" formControlName="name">
+        <span *ngIf="(form.controls.name.status == 'INVALID') && (form.controls.name.touched)" class="text-danger">
+          The field is required and cannot contain numbers or special characters
+        </span>
+      </div>
+
+      <div class="col-12 form-group mb-0 px-0 mt-3">
+        <label class="mt-0 font-size-14">Your Email</label>
+        <input type="text" class="form-control"
+               aria-describedby="email"
+               placeholder="" formControlName="email">
+
+        <span *ngIf="(form.controls.email.status == 'INVALID') && (form.controls.email.touched)" class="text-danger">
+          the field is required and should be valid
+        </span>
+      </div>
+
+
+      <div class="col-12 form-group mb-0 px-0 mt-3">
+        <label class="mt-0 font-size-14">{{"IDENTIFICATION_CARD" | translate}}</label>
+        <input type="number" class="form-control"
+               aria-describedby="password"
+               placeholder="" formControlName="cedula">
+        <span *ngIf="(form.controls.cedula.status == 'INVALID') && (form.controls.cedula.touched)"
+              class="text-danger">the field is required</span>
+      </div>
+
+      <div class="col-12 form-group mb-0 px-0 mt-3">
+        <label class="mt-0 font-size-14">{{"ROL" | translate}}</label>
+
+        <select class="form-control" formControlName="rol" id="exampleFormControlSelect1">
+          <option disabled selected>Elegir un Rol</option>
+          <option [ngValue]="item.nombre" *ngFor="let item  of roles"> {{item?.nombre}}</option>
+        </select>
+
+
+        <span *ngIf="(form.controls.rol.status == 'INVALID') && (form.controls.rol.touched)"
+              class="text-danger">the field is required</span>
+      </div>
+
+
+
+      <div class="col-12 form-group mb-0 px-0 mt-3">
+        <label class="mt-0 font-size-14">Password</label>
+        <input type="password" class="form-control"
+               aria-describedby="password"
+               placeholder="" formControlName="password">
+        <span *ngIf="(form.controls.password.status == 'INVALID') && (form.controls.password.touched)"
+              class="text-danger">the field is required</span>
+      </div>
+
+
+      <div class="text-center col-12 mt-3">
+
+        <button type="submit"
+                class="btn btn-primary btn-block">
+          SING UP
+        </button>
+        <p class="mt-2 font-size-12"> By Creating account You agree to the
+          <span class="text-primary cursor">Terms of use</span>
+          and <span class="text-primary cursor">Privacy Polycy</span>
+        </p>
+      </div>
+
+    </form>
+
+
+  </div>
+
+
+</div>
+
